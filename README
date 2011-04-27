@@ -1,1 +1,7 @@
-This is a simple database to convert 64-bit key and values into a fast readonly lookup file.
+This is a simple database to convert 64-bit key and values into a fast readonly lookup file. I needed it as a way to quickly find hash values and a related file ID. With no cache, it requires at most 3 seeks for a lookup. 
+
+Only tested on 64-bit platforms. Files can be mmap'd or read as a stream. Doesn't currently support merging files. Uses delta compression inside each page. From one test app, each 128-bit record was taking about 2.3 bytes. The closer the clustering of values, the better the compression.
+
+I wrote my own because I couldn't find anything that met my overhead requirements. Linux support should not require many changes.
+
+I'll add some samples and more comments soon.
