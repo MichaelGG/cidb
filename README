@@ -5,3 +5,5 @@ Only tested on 64-bit platforms. Files can be mmap'd or read as a stream. Doesn'
 I wrote my own because I couldn't find anything that met my overhead requirements. Linux support should not require many changes.
 
 I'll add some samples and more comments soon.
+
+Source is released under public domain. But if you find it useful, I'd love to hear about it (mgg@giagnocavo.net).
